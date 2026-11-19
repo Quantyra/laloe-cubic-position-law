@@ -1,4 +1,4 @@
-"""Interval audit of the S311 finite-time bounds. Requires python-flint 0.9.0."""
+"""Interval audit for the finite-width cubic position law. Requires python-flint 0.9.0."""
 
 from flint import arb, ctx
 
@@ -35,6 +35,15 @@ def main():
     hessian = 4 / (3 * sqrt_pi)
     radial_second = (2 / pi) * 4 * (arb(3) / 2).gamma()
     check((radial_second / 3 - hessian).contains(0), "kernel curvature")
+
+    m0, m1, m2, m3, m4, m5 = moments
+    one_kick = (m1 + 4 * m3 + m5, 3 * m2 + 2 * m4, m3)
+    check(all(x <= y for x, y in zip(one_kick, (418, 181, 21))),
+          "one-kick second derivative coefficients in the retained radius")
+    pair_moments = (2*m0*m1, 2*m0*m2 + 2*m1**2, 2*m0*m3 + 6*m1*m2)
+    check(pair_moments == (12, 46, 210), "product-measure moment bounds")
+    check(2*(pair_moments[0] + 3*pair_moments[2]) <= 1284
+          and 2*pair_moments[1] <= 92, "two-kick remainder coefficients")
 
     exp_majorant = (16 * max_time).exp()
     min_wave = 1 - 17 * max_time
