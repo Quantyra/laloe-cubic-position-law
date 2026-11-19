@@ -54,7 +54,7 @@ $$
  P_\epsilon(t)-P_0(t)=2\phi(1)\frac{\epsilon H}{6}t^3+o(t^3),
  \qquad \phi(1)=\frac{e^{-1/2}}{\sqrt{2\pi}} .
 $$
-The initial probability is $\operatorname{erfc}(1/\sqrt2)=0.31731050786\ldots$. The argument below justifies threshold differentiation, including tails, and supplies an explicit finite time. The dimensionful dilation coefficient multiplying $\epsilon T^3/6$ is $4Gm\omega/(3\sqrt{\pi}a^3)$, as follows by restoring units. At fixed positive coupling the ideal probability increase has a definite sign. Only the local curvature of the smooth source enters its leading coefficient.
+The initial probability is $\operatorname{erfc}(1/\sqrt2)=0.31731050786\ldots$. The argument below justifies threshold differentiation, including tails, and supplies an explicit finite time. The dimensionful dilation coefficient multiplying $\epsilon T^3/6$ is $4Gm\omega/(3\sqrt{\pi}a^3)$, as follows by restoring units. For fixed positive coupling the leading probability coefficient is positive. Only the local curvature of the smooth source enters its leading coefficient.
 
 ## A finite-time bound for the full kernel including retardation
 
@@ -95,7 +95,7 @@ Indeed $|Z'|\le Rk+k^2,\ |Z''|\le Rk+2k^2$. Taylor integration contributes $\int
 
 For two frozen kicks the integrated gradient at both ages zero vanishes by parity. Scale both ages by $v\in[0,1]$. The derivative of the gradient integrand in $v$ has absolute value at most $t e^{RtS}(S+R S^2+3S^3)$. This uses the preceding Weyl phase, $|\partial_v(D+iP)|\le tS$, and the product rule; the frozen source factors are constant in $v$. The two-measure moments of $S,S^2,S^3$ are bounded respectively by $2M_0M_1$, $2M_0M_2+2M_1^2$, and $2M_0M_3+6M_1M_2$, giving upper bounds $12,46,210$. Thus this term costs at most $(1284+92R)t^3$. The frozen tilted mass and first moment, including $|\alpha|$, are at most $4$ and $6$. All frozen terms with at least three kicks cost at most $6t(e^{4t}-1-4t)\le50t^3$.
 
-For the full retarded field, replace each Fourier factor in turn. A marked difference costs at most $40 k t^2$ because $L_t\le20t^2$. Remaining factors have moments $8,17$. Summing the marked terms bounds the gradient difference at $q$ by
+For the full retarded field, replace each Fourier factor in turn. A marked difference costs at most $40 k t^2$ because $L_t\le20t^2$. The remaining factors have moments bounded by $8,17$. Summing the marked terms bounds the gradient difference at $q$ by
 $$
  e^{16t}\{(2t)40t^2 M_2+(2t)^2 40t^2 M_1\,17\}<600t^3 .
 $$

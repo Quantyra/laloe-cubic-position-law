@@ -1,6 +1,6 @@
 # Lean certification plan
 
-**Certification status: planned.** The public manuscript and the Arb replay are the targets and numerical evidence. No Lean theorem is claimed here. A proof can cover the probability calculation conditional on a trajectory estimate before a separate proof derives that estimate from the dynamics.
+**Certification status: planned.** Use the [reviewed manuscript snapshot](https://github.com/Quantyra/laloe-cubic-position-law/blob/ce117ec5af78ff19d30c63963fdd7a88157c5e5d/manuscript.md) and its [Arb replay](https://github.com/Quantyra/laloe-cubic-position-law/blob/ce117ec5af78ff19d30c63963fdd7a88157c5e5d/verify.py) as the claim map and numerical evidence. No Lean theorem is claimed here. A proof can cover the probability calculation conditional on a trajectory estimate before a separate proof derives that estimate from the dynamics.
 
 ## Statement and interfaces
 
@@ -20,6 +20,8 @@ The ideal bit is $\mathbf 1_{\{|e\cdot Q_\epsilon(t;q)|>s\}}$. On the unresolved
 | F. Finite example and sampling | Validate the Gaussian moments and tails with directed/rational bounds, including the bounded-history correction. Derive the shifted-threshold slopes, failure budgets, and the disjoint increment intervals. Prove the Hoeffding upper allocation and Bernoulli relative entropy/Pinsker lower bound at the selected time. | Keep trial independence, matched timing and the 5% error criterion explicit. Distinguish the per-time count from total preparations. Numerical intervals from Python are test vectors; Lean needs its own proved enclosures. |
 
 ## First bounded allocation
+
+Proposition 1 needs the right-hand limit of the normalized displacement for each fixed starting point. Derive it from stage E using a fixed admissible radius. A classical third time derivative would be a stronger target. For Theorem 2 instead let the retained radius grow with decreasing time and prove a uniform error for every selection from each arm's interval, independently. Include Borel measurability of the retained solution map among D's exports.
 
 Use Lean 4.33.0 and mathlib commit `db584cd6d46c92f209a44c0f1c829460d327499d` as the proposed starting pin used in the related proof lane. Verify availability before implementation. Begin with one 90-minute dependency audit for stage A: construct the measurable two-band inclusion with arbitrary tail assignments and identify the exact APIs needed for the Gaussian projection and radial integral. Return a compiling conditional lemma or a list of missing definitions with their input and output types. The first falsifier is a proof requiring trajectories or a final equilibrium law outside the retained ball. Park that formulation and repair the interface before estimating the analytic stages. D and E are the most demanding parts; the first allocation carries no full-proof estimate.
 

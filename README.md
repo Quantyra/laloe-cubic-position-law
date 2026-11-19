@@ -4,7 +4,7 @@ Daniel Fredriksen · Quantyra Inc. · [ORCID](https://orcid.org/0009-0002-9123-7
 
 This preprint studies the probability of finding a guided mass farther than one initial standard deviation from the center of a harmonic trap. The finite-width gravitational collapse term drives an outward shift at third order in time. The proof treats the full retarded kernel. The finite-time example is conditional on the preparation history and terminal position readout.
 
-[Manuscript](manuscript.pdf) · [Editable source](manuscript.md) · [Numerical audit](verify.py) · [Lean certification plan](lean-certification-plan.md)
+[Manuscript](manuscript.pdf) · [Editable source](manuscript.md) · [Numerical audit](verify.py) · [Three-lens review](review/disposition.md) · [Lean certification plan](lean-certification-plan.md)
 
 ## Reproduce the files
 
